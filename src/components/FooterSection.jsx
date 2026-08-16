@@ -69,7 +69,7 @@ export default function FooterSection({ onContactClick }) {
         {/* Social Icon Channels */}
         <div className="flex items-center justify-center gap-4 pt-6 text-[#8892B0]">
           <a
-            href="https://github.com/Abhimishra68"
+            href="https://github.com/chitranshu07-coder"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-[#101B33] border border-white/10 text-[#8892B0] hover:text-[#00F0FF] hover:border-[#00F0FF]/50 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all"
