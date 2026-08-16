@@ -42,15 +42,12 @@ function CertificateMockup({ cert }) {
           </svg>
         </div>
 
-        {/* Back Side: Cloned Original PDF Document */}
+        {/* Back Side: Cloned Original PDF Document rendered as PNG */}
         <div className="flip-card-back relative rounded-xl overflow-hidden bg-[#0c162c] shadow-2xl">
-          {/* Invisible Overlay to block iframe mouse events, facilitating smooth mouse leaves */}
-          <div className="absolute inset-0 bg-transparent z-20 pointer-events-none"></div>
-          
-          <iframe 
-            src={`${cert.pdf}#toolbar=0&navpanes=0&scrollbar=0`}
-            className="w-full h-full border-none z-10 relative bg-[#07122A]"
-            title={`Original Certificate PDF: ${cert.title}`}
+          <img 
+            src={cert.pdf.replace('.pdf', '.png')}
+            alt={`Original Certificate: ${cert.title}`}
+            className="w-full h-full object-contain bg-[#07122A] z-10 relative"
           />
         </div>
       </div>

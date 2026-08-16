@@ -70,7 +70,7 @@ export default function Navbar({ activeSection, onResumeClick, scrollProgress })
           <div className="flex items-center gap-4">
             <button
               onClick={onResumeClick}
-              className="relative group overflow-hidden px-5 py-2 rounded-full bg-[#00F0FF] text-[#0A192F] font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] active:scale-95 flex items-center gap-1.5 cursor-pointer"
+              className="hidden lg:flex relative group overflow-hidden px-5 py-2 rounded-full bg-[#00F0FF] text-[#0A192F] font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] active:scale-95 items-center gap-1.5 cursor-pointer"
             >
               <span>Résumé</span>
               <span className="material-symbols-outlined text-[15px] group-hover:translate-y-[-1px] group-hover:translate-x-[1px] transition-transform">
@@ -114,6 +114,19 @@ export default function Navbar({ activeSection, onResumeClick, scrollProgress })
                 {item.label}
               </a>
             ))}
+            
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onResumeClick();
+              }}
+              className="mt-4 w-full py-2.5 rounded-full bg-[#00F0FF] text-[#0A192F] font-mono text-xs font-bold uppercase tracking-wider text-center transition-all duration-300 hover:bg-white hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <span>Résumé</span>
+              <span className="material-symbols-outlined text-[15px]">
+                arrow_outward
+              </span>
+            </button>
           </nav>
         </div>
       )}
