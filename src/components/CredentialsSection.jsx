@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 function CertificateMockup({ cert }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [imgError, setImgError] = useState(false);
+
+  const pngUrl = getAssetUrl(cert.pdf.replace('.pdf', '.png'));
+
   return (
-    <div className="flip-card">
+    <div 
+      className={`flip-card ${isFlipped ? 'flipped' : ''}`}
+      onClick={() => setIsFlipped(!isFlipped)}
+      title="Click or hover to flip certificate"
+    >
       <div className="flip-card-inner">
         {/* Front Side: Digital SVG Mockup */}
         <div className="flip-card-front relative border border-white/10 rounded-xl overflow-hidden bg-[#07122A] p-4 sm:p-6 shadow-2xl select-none">
@@ -43,12 +53,24 @@ function CertificateMockup({ cert }) {
         </div>
 
         {/* Back Side: Cloned Original PDF Document rendered as PNG */}
-        <div className="flip-card-back relative rounded-xl overflow-hidden bg-[#0c162c] shadow-2xl">
-          <img 
-            src={cert.pdf.replace('.pdf', '.png')}
-            alt={`Original Certificate: ${cert.title}`}
-            className="w-full h-full object-contain bg-[#07122A] z-10 relative"
-          />
+        <div className="flip-card-back relative rounded-xl overflow-hidden bg-[#0c162c] shadow-2xl flex items-center justify-center">
+          {!imgError ? (
+            <img 
+              src={pngUrl}
+              alt={`Original Certificate: ${cert.title}`}
+              className="w-full h-full object-contain bg-[#07122A] z-10 relative"
+              onError={() => setImgError(true)}
+            />
+          ) : (
+            <div className="p-6 text-center space-y-3 z-10 select-none">
+              <span className="material-symbols-outlined text-4xl text-[#00F0FF]">verified</span>
+              <p className="font-headline font-bold text-white text-sm">{cert.title}</p>
+              <p className="font-mono text-xs text-[#8892B0]">{cert.issuer}</p>
+              <span className="inline-block px-3 py-1 rounded-full bg-[#00F0FF]/10 text-[#00F0FF] font-mono text-[11px]">
+                Original Verified Document
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -397,7 +419,8 @@ export default function CredentialsSection() {
           transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           transform-style: preserve-3d;
         }
-        .flip-card:hover .flip-card-inner {
+        .flip-card:hover .flip-card-inner,
+        .flip-card.flipped .flip-card-inner {
           transform: rotateY(180deg);
         }
         .flip-card-front, .flip-card-back {
@@ -623,7 +646,7 @@ export default function CredentialsSection() {
             {/* Actions */}
             <div className="flex flex-col sm:flex-row justify-end gap-3">
               <a
-                href={selectedCert.pdf}
+                href={getAssetUrl(selectedCert.pdf)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2.5 rounded-full text-[#0A192F] font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white text-center transition-all flex items-center justify-center gap-2"
