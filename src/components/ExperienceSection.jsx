@@ -37,7 +37,7 @@ export default function ExperienceSection({ onResumeClick }) {
           </div>
 
           {/* Timeline Card */}
-          <div className="glass-panel p-8 sm:p-10 rounded-2xl relative overflow-hidden group border border-[#00F0FF]/20">
+          <div className="glass-panel p-5 sm:p-8 md:p-10 rounded-2xl relative overflow-hidden group border border-[#00F0FF]/20">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 mb-6 border-b border-white/[0.06]">
               
               <div>

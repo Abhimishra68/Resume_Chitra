@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function ProjectsSection() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
+
+  useEffect(() => {
+    if (selectedCaseStudy) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedCaseStudy]);
 
   const projects = [
     {
@@ -9,7 +20,7 @@ export default function ProjectsSection() {
       title: "T20 World Cup Cricket Analytics: Best Playing XI",
       tags: ["Python", "Web Scraping", "Power BI", "DAX"],
       synopsis: "Web-scraped live tournament data into analysis-ready datasets, defined batting/bowling/role-based player KPIs, and built an interactive Power BI dashboard with DAX measures to data-drive a Best Playing XI selection.",
-      github: "https://github.com/chitranshu07-coder",
+      github: "https://github.com/chitranshu07-coder/T20-World-Cup-Cricket-Analytics",
       accent: "#00F0FF",
       category: "Sports Analytics / KPI Modeling",
       details: [
@@ -71,7 +82,7 @@ export default function ProjectsSection() {
       title: "Customer Shopping Behavior Analysis",
       tags: ["Python", "SQL", "Power BI"],
       synopsis: "Cleaned and modeled shopping data with Python/Pandas, used SQL to surface customer segments, loyalty patterns and purchase drivers, then built a Power BI dashboard tracking the resulting KPIs.",
-      github: "https://github.com/chitranshu07-coder",
+      github: "https://github.com/chitranshu07-coder/Customer_Shopping_Behavior_Analysis",
       accent: "#00F0FF",
       category: "Customer Analytics / RFM Segmentation",
       details: [
@@ -115,9 +126,10 @@ export default function ProjectsSection() {
       title: "Meta Ad Performance Analysis",
       tags: ["SQL", "Python", "Excel", "Power BI"],
       synopsis: "Cleaned Meta advertising data with Python and Excel, used SQL to evaluate campaign KPIs and performance patterns, and consolidated everything into a stakeholder-ready Power BI dashboard.",
-      github: "https://github.com/chitranshu07-coder",
+      github: "https://github.com/chitranshu07-coder/Meta-Ad-Performance-Analysis",
       accent: "#818cf8",
       category: "Marketing Analytics / Paid Media",
+      isCurrentShowcase: true,
       details: [
         "Extracted campaign performance metrics across Facebook and Instagram placements.",
         "Modeled Cost-Per-Acquisition (CPA), Return-on-Ad-Spend (ROAS), and Click-Through-Rate (CTR) across ad sets.",
@@ -240,11 +252,19 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Content Body */}
-                <div className="p-7 space-y-4">
-                  {/* Category Pill */}
-                  <span className="font-mono text-[10px] text-[#00F0FF] uppercase tracking-widest block">
-                    {project.category}
-                  </span>
+                <div className="p-5 sm:p-7 space-y-4">
+                  {/* Category Pill & Showcase Badge */}
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-mono text-[10px] text-[#00F0FF] uppercase tracking-widest block">
+                      {project.category}
+                    </span>
+                    {project.isCurrentShowcase && (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#818cf8]/10 border border-[#818cf8]/35 font-mono text-[9px] text-[#a5b4fc] uppercase tracking-wider font-semibold animate-pulse">
+                        <span className="w-1 h-1 rounded-full bg-[#818cf8]"></span>
+                        Current Project
+                      </span>
+                    )}
+                  </div>
 
                   {/* Title in Literata */}
                   <h3 className="font-headline font-bold text-xl text-white group-hover:text-[#00F0FF] transition-colors leading-snug">
@@ -301,7 +321,7 @@ export default function ProjectsSection() {
       {selectedCaseStudy && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#07122A]/85 backdrop-blur-xl animate-in fade-in duration-200">
           <div 
-            className="relative w-full max-w-2xl glass-panel rounded-2xl p-8 max-h-[85vh] overflow-y-auto border border-[#00F0FF]/30 shadow-[0_0_50px_rgba(0,240,255,0.15)]"
+            className="relative w-full max-w-2xl glass-panel rounded-2xl p-5 sm:p-8 max-h-[85vh] overflow-y-auto border border-[#00F0FF]/30 shadow-[0_0_50px_rgba(0,240,255,0.15)]"
             onClick={(e) => e.stopPropagation()}
           >
             <button

@@ -51,7 +51,7 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
 
           {/* Main Display Headline in Literata Serif */}
           <div className="space-y-3">
-            <h1 className="font-headline font-bold text-5xl sm:text-7xl md:text-8xl tracking-tight text-[#D9E2FF] leading-[1.05]">
+            <h1 className="font-headline font-bold text-4xl xs:text-5xl sm:text-7xl md:text-8xl tracking-tight text-[#D9E2FF] leading-[1.05]">
               KUMAR <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D9E2FF] via-[#CCD6F6] to-[#00F0FF]">
                 CHITRANSHU
@@ -59,12 +59,12 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
             </h1>
 
             {/* Signature Monospace Discipline Label */}
-            <div className="flex items-center gap-2 pt-2">
-              <span className="font-mono text-sm sm:text-base md:text-lg text-[#00F0FF] font-medium tracking-wide">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 pt-2">
+              <span className="font-mono text-xs sm:text-sm sm:text-base md:text-lg text-[#00F0FF] font-medium tracking-wide">
                 Data Analyst
               </span>
-              <span className="text-[#8892B0] font-mono">—</span>
-              <span className="font-mono text-xs sm:text-sm md:text-base text-[#8892B0] tracking-wide">
+              <span className="text-[#8892B0] font-mono hidden xs:inline">—</span>
+              <span className="font-mono text-[10px] sm:text-xs sm:text-sm md:text-base text-[#8892B0] tracking-wide">
                 Python · SQL · Power BI · PostgreSQL
               </span>
             </div>
@@ -76,23 +76,25 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
           </p>
 
           {/* Action CTAs and Social Row */}
-          <div className="flex flex-wrap items-center gap-5 pt-4">
-            <a
-              href="#projects"
-              className="px-7 py-3.5 rounded-full bg-[#00F0FF] text-[#0A192F] font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white hover:shadow-[0_0_30px_rgba(0,240,255,0.4)] transition-all duration-300 active:scale-95"
-            >
-              View Projects
-            </a>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-4">
+            <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3.5 w-full sm:w-auto">
+              <a
+                href="#projects"
+                className="px-7 py-3.5 rounded-full bg-[#00F0FF] text-[#0A192F] font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white hover:shadow-[0_0_30px_rgba(0,240,255,0.4)] transition-all duration-300 active:scale-95 text-center"
+              >
+                View Projects
+              </a>
 
-            <button
-              onClick={onResumeClick}
-              className="px-7 py-3.5 rounded-full border border-[#00F0FF]/50 bg-[#00F0FF]/5 text-[#00F0FF] hover:bg-[#00F0FF]/15 hover:border-[#00F0FF] font-mono text-xs font-semibold uppercase tracking-wider transition-all duration-300 active:scale-95"
-            >
-              Download Résumé
-            </button>
+              <button
+                onClick={onResumeClick}
+                className="px-7 py-3.5 rounded-full border border-[#00F0FF]/50 bg-[#00F0FF]/5 text-[#00F0FF] hover:bg-[#00F0FF]/15 hover:border-[#00F0FF] font-mono text-xs font-semibold uppercase tracking-wider transition-all duration-300 active:scale-95 text-center"
+              >
+                Download Résumé
+              </button>
+            </div>
 
             {/* Social Quick Links */}
-            <div className="flex items-center gap-3 pl-2 sm:pl-4 border-l border-white/10">
+            <div className="flex items-center justify-center gap-3 py-2 sm:py-0 pl-0 sm:pl-4 border-t sm:border-t-0 sm:border-l border-white/10 w-full sm:w-auto">
               <a
                 href="https://github.com/chitranshu07-coder"
                 target="_blank"
@@ -106,7 +108,7 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/kumar-chitranshu-3a5635264/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-[#101B33] border border-white/10 text-[#8892B0] hover:text-[#00F0FF] hover:border-[#00F0FF]/40 transition-all"
@@ -187,7 +189,7 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
           </svg>
 
           {/* Floating Widget 1: Ingestion Data Trend Card */}
-          <div className="absolute top-0 left-2 sm:left-4 w-52 glass-panel p-3.5 rounded-xl border border-white/10 shadow-xl backdrop-blur-md animate-float-1 z-10 select-none">
+          <div className="hidden sm:block absolute top-0 left-2 sm:left-4 w-52 glass-panel p-3.5 rounded-xl border border-white/10 shadow-xl backdrop-blur-md animate-float-1 z-10 select-none">
             <div className="flex justify-between items-center text-[9px] font-mono text-[#8892B0]">
               <span>INGESTION_STREAM</span>
               <span className="text-[#00F0FF]">LIVE</span>
@@ -210,7 +212,7 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
           </div>
 
           {/* Floating Widget 2: Scan Status target */}
-          <div className="absolute top-1/3 -right-2 sm:-right-4 w-44 glass-panel p-3 rounded-xl border border-white/10 shadow-xl backdrop-blur-md animate-float-2 z-10 select-none">
+          <div className="hidden sm:block absolute top-1/3 -right-2 sm:-right-4 w-44 glass-panel p-3 rounded-xl border border-white/10 shadow-xl backdrop-blur-md animate-float-2 z-10 select-none">
             <div className="flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#64FFDA] opacity-75"></span>
@@ -228,7 +230,7 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
           </div>
 
           {/* Floating Widget 3: Metrics & KPI vertical bars */}
-          <div className="absolute -bottom-4 left-6 sm:left-12 w-48 glass-panel p-3 rounded-xl border border-white/10 shadow-xl backdrop-blur-md animate-float-2 z-10 select-none">
+          <div className="hidden sm:block absolute -bottom-4 left-6 sm:left-12 w-48 glass-panel p-3 rounded-xl border border-white/10 shadow-xl backdrop-blur-md animate-float-2 z-10 select-none">
             <div className="text-[9px] font-mono text-[#8892B0] uppercase tracking-wide">
               ACCURACY_DISTRIBUTION
             </div>

@@ -6,11 +6,11 @@ export default function ResumeModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-void/90 backdrop-blur-2xl animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-4xl glass-panel rounded-2xl p-6 sm:p-8 max-h-[92vh] flex flex-col border border-cyan/30 shadow-[0_0_60px_rgba(0,240,255,0.15)]"
+        className="relative w-full max-w-4xl glass-panel rounded-2xl p-4 sm:p-6 md:p-8 max-h-[92vh] flex flex-col border border-cyan/30 shadow-[0_0_60px_rgba(0,240,255,0.15)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-4 border-b border-white/10">
           <div>
             <span className="font-mono text-[11px] text-cyan uppercase tracking-widest block">
               Curriculum Vitae
