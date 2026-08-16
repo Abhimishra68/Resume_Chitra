@@ -101,3 +101,8 @@
   background-color: rgba(0, 240, 255, 0.08);
   border-color: rgba(0, 240, 255, 0.8);
 }
+
+/* Modal Stacking Context Correction */
+body.modal-open main {
+  z-index: 60 !important;
+}

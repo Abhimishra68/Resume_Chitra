@@ -65,11 +65,14 @@ export default function CredentialsSection() {
   useEffect(() => {
     if (selectedCert) {
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
     } else {
       document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
     }
     return () => {
       document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
     };
   }, [selectedCert]);
 
@@ -566,25 +569,25 @@ export default function CredentialsSection() {
 
       {/* Certification Details & Snapshot Modal */}
       {selectedCert && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#07122A]/85 backdrop-blur-xl animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-4 sm:p-6 overflow-y-auto bg-[#07122A]/85 backdrop-blur-xl animate-in fade-in duration-200">
           <div 
-            className="relative w-full max-w-2xl glass-panel rounded-2xl p-4 sm:p-6 md:p-8 max-h-[90vh] overflow-y-auto border border-[#00F0FF]/30 shadow-[0_0_50px_rgba(0,240,255,0.15)] animate-in zoom-in-95 duration-200"
+            className="relative w-full max-w-2xl glass-panel rounded-2xl pt-12 pb-6 px-5 sm:p-8 my-auto border border-[#00F0FF]/30 shadow-[0_0_50px_rgba(0,240,255,0.15)] animate-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedCert(null)}
-              className="absolute top-6 right-6 p-2 text-[#8892B0] hover:text-white transition-colors rounded-lg bg-[#101B33] border border-white/10"
+              className="absolute top-4 sm:top-6 right-4 sm:right-6 p-2 text-[#8892B0] hover:text-white transition-colors rounded-lg bg-[#101B33] border border-white/10"
               aria-label="Close Modal"
             >
               <span className="material-symbols-outlined text-xl">close</span>
             </button>
 
             {/* Header */}
-            <span className="font-mono text-xs uppercase tracking-widest block mb-2" style={{ color: selectedCert.accent }}>
+            <span className="font-mono text-[10px] sm:text-xs uppercase tracking-widest block mb-2 pr-12" style={{ color: selectedCert.accent }}>
               {selectedCert.issuer}
             </span>
-            <h3 className="font-headline font-bold text-xl sm:text-2xl text-white mb-4 leading-tight pr-8">
+            <h3 className="font-headline font-bold text-xl sm:text-2xl text-white mb-4 leading-tight pr-12">
               {selectedCert.title}
             </h3>
 
@@ -609,14 +612,14 @@ export default function CredentialsSection() {
             </div>
 
             {/* Digital Snapshot Section */}
-            <h4 className="font-mono text-xs uppercase tracking-wider text-[#D9E2FF] mb-3 flex items-center justify-between gap-2">
+            <h4 className="font-mono text-[10px] sm:text-xs uppercase tracking-wider text-[#D9E2FF] mb-3 flex items-center justify-between gap-2">
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm" style={{ color: selectedCert.accent }}>screenshot_monitor</span>
                 <span>Hover Card to Flip (Digital Badge vs Original PDF)</span>
               </div>
             </h4>
             
-            <div className="mb-8">
+            <div className="mb-6 max-w-md mx-auto">
               <CertificateMockup cert={selectedCert} />
             </div>
 

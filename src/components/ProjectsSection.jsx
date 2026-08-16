@@ -6,11 +6,14 @@ export default function ProjectsSection() {
   useEffect(() => {
     if (selectedCaseStudy) {
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
     } else {
       document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
     }
     return () => {
       document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
     };
   }, [selectedCaseStudy]);
 
@@ -319,24 +322,24 @@ export default function ProjectsSection() {
 
       {/* Case Study Modal */}
       {selectedCaseStudy && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#07122A]/85 backdrop-blur-xl animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-4 sm:p-6 overflow-y-auto bg-[#07122A]/85 backdrop-blur-xl animate-in fade-in duration-200">
           <div 
-            className="relative w-full max-w-2xl glass-panel rounded-2xl p-5 sm:p-8 max-h-[85vh] overflow-y-auto border border-[#00F0FF]/30 shadow-[0_0_50px_rgba(0,240,255,0.15)]"
+            className="relative w-full max-w-2xl glass-panel rounded-2xl pt-12 pb-6 px-5 sm:p-8 my-auto border border-[#00F0FF]/30 shadow-[0_0_50px_rgba(0,240,255,0.15)]"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setSelectedCaseStudy(null)}
-              className="absolute top-6 right-6 p-2 text-[#8892B0] hover:text-white transition-colors rounded-lg bg-[#101B33] border border-white/10"
+              className="absolute top-4 sm:top-6 right-4 sm:right-6 p-2 text-[#8892B0] hover:text-white transition-colors rounded-lg bg-[#101B33] border border-white/10"
               aria-label="Close Case Study"
             >
               <span className="material-symbols-outlined text-xl">close</span>
             </button>
 
-            <span className="font-mono text-xs text-[#00F0FF] uppercase tracking-widest block mb-2">
+            <span className="font-mono text-xs text-[#00F0FF] uppercase tracking-widest block mb-2 pr-12">
               {selectedCaseStudy.category}
             </span>
 
-            <h3 className="font-headline font-bold text-2xl sm:text-3xl text-white mb-4 leading-tight">
+            <h3 className="font-headline font-bold text-2xl sm:text-3xl text-white mb-4 leading-tight pr-12">
               {selectedCaseStudy.title}
             </h3>
 
