@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>K.CHITRANSHU - Data Analyst</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Literata:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#030d25",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-tertiary-fixed-variant": "#005142",
+                        "surface-tint": "#b9c7e4",
+                        "inverse-surface": "#d9e2ff",
+                        "on-tertiary-fixed": "#002019",
+                        "primary": "#b9c7e4",
+                        "secondary": "#d3fbff",
+                        "tertiary-fixed": "#5ffbd6",
+                        "surface-variant": "#2a344e",
+                        "on-surface": "#d9e2ff",
+                        "background": "#07122a",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "tertiary": "#38debb",
+                        "inverse-primary": "#515f78",
+                        "on-secondary-fixed": "#002022",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-dim": "#07122a",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#2a344e",
+                        "on-secondary-container": "#00686f",
+                        "surface": "#07122a",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-background": "#d9e2ff",
+                        "on-primary": "#233148",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#151f37",
+                        "tertiary-container": "#001e17",
+                        "on-tertiary-container": "#00937a",
+                        "on-secondary": "#00363a",
+                        "tertiary-fixed-dim": "#38debb",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#00382d",
+                        "on-primary-container": "#74829d",
+                        "outline": "#8f9097",
+                        "surface-container-low": "#101b33",
+                        "inverse-on-surface": "#263049",
+                        "error-container": "#93000a",
+                        "secondary-container": "#00eefc",
+                        "secondary-fixed": "#7df4ff",
+                        "on-primary-fixed-variant": "#39475f",
+                        "primary-container": "#0a192f",
+                        "surface-bright": "#2f3952",
+                        "outline-variant": "#44474d",
+                        "surface-container-high": "#1f2942",
+                        "on-primary-fixed": "#0d1c32"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "section-gap": "160px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "container-max": "1200px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Literata"],
+                        "data-point": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Literata"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["Literata"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-md": ["Literata"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                        "data-point": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["72px", {"lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            background-image: linear-gradient(theme('colors.on-surface-variant') 1px, transparent 1px),
+                              linear-gradient(90deg, theme('colors.on-surface-variant') 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: theme('colors.background');
+            opacity: 0.95;
+            z-index: -1;
+        }
+        .glass-card {
+            background: theme('colors.surface-container-low');
+            backdrop-filter: blur(20px);
+            border: 1px solid theme('colors.outline-variant');
+        }
+        .glass-border-gradient {
+            border: 1px solid transparent;
+            background: linear-gradient(theme('colors.surface-container-low'), theme('colors.surface-container-low')) padding-box,
+                        linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,240,255,0.3)) border-box;
+        }
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: theme('colors.secondary');
+            filter: blur(100px);
+            opacity: 0.05;
+            border-radius: 50%;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen relative overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="bg-surface/80 backdrop-blur-xl border-b border-white/10 fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">K.CHITRANSHU</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1 hover:bg-white/5" href="#">Work</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-white/5" href="#">Experience</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-white/5" href="#">About</a>
+</nav>
+<button class="font-body-md text-body-md text-primary hover:bg-white/5 px-4 py-2 rounded">Connect</button>
+</div>
+</header>
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+<div class="glow-effect top-20 left-1/4"></div>
+<div class="glow-effect bottom-20 right-1/4"></div>
+<!-- Hero Section -->
+<section class="min-h-[716px] flex flex-col justify-center relative z-10 mb-section-gap">
+<div class="absolute inset-0 -z-10 opacity-30 pointer-events-none">
+<img class="w-full h-full object-cover rounded-xl mix-blend-screen" data-alt="Abstract data visualization background featuring glowing microscopic nodes connected by thin cyan and teal lines in a deep dark space, resembling a neural network or complex data structure, high-tech analytical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbwiH89b6Mqj50OWSMqDwe5NZI6qJHMHSbsD1f-9rwZyzxissgxhDdRDoOBvB_QMCsRr30Cjmo-yXuBZiP5L7ibviI-pX9AOD9Lu7WRCB0Z8fLHVb9uuhYV531K9qL6xdM87zavmsCfT2uc4x5xe4p1WRYm-htW6nc9KdcimvzMp3NPsfQW1UF4TjXUOx5z_R7nLoZp-JZvjY0rBMEDlnzsAj1tYEkQlLXa6WVuFYAy2hxh2ybftA0"/>
+</div>
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 mb-6 border border-outline-variant rounded-full px-4 py-1.5 bg-surface-container-low/50 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Global Specialist</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">
+                    Architecting <span class="text-secondary">Insights</span><br/> Through Data.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                    Data Analyst focused on transforming raw data into actionable business insights with Python, SQL, and Power BI. Meticulous approach to complex datasets, revealing the strategic narratives hidden within.
+                </p>
+<div class="flex flex-wrap gap-4 items-center">
+<a class="inline-flex items-center justify-center h-12 px-8 bg-secondary text-on-secondary font-label-caps text-label-caps uppercase rounded-DEFAULT hover:opacity-90 transition-opacity" href="#projects">
+                        View Core Projects
+                    </a>
+<a class="inline-flex items-center justify-center h-12 px-8 border border-secondary text-secondary font-label-caps text-label-caps uppercase rounded-DEFAULT hover:bg-secondary/10 transition-colors" href="#contact">
+                        Connect
+                    </a>
+</div>
+</div>
+</section>
+<!-- Quick Skills -->
+<section class="mb-section-gap">
+<div class="flex items-center gap-4 mb-8">
+<span class="h-[1px] w-12 bg-tertiary"></span>
+<h2 class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Core Technical Arsenal</h2>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container border border-outline-variant rounded-full font-data-point text-data-point text-on-surface-variant hover:border-secondary transition-colors cursor-default">Python</span>
+<span class="px-4 py-2 bg-surface-container border border-outline-variant rounded-full font-data-point text-data-point text-on-surface-variant hover:border-secondary transition-colors cursor-default">SQL (PostgreSQL/MySQL)</span>
+<span class="px-4 py-2 bg-surface-container border border-secondary rounded-full font-data-point text-data-point text-secondary shadow-[0_0_10px_rgba(211,251,255,0.2)] cursor-default">Power BI</span>
+<span class="px-4 py-2 bg-surface-container border border-outline-variant rounded-full font-data-point text-data-point text-on-surface-variant hover:border-secondary transition-colors cursor-default">Tableau</span>
+<span class="px-4 py-2 bg-surface-container border border-outline-variant rounded-full font-data-point text-data-point text-on-surface-variant hover:border-secondary transition-colors cursor-default">Pandas / NumPy</span>
+<span class="px-4 py-2 bg-surface-container border border-outline-variant rounded-full font-data-point text-data-point text-on-surface-variant hover:border-secondary transition-colors cursor-default">Statistical Modeling</span>
+<span class="px-4 py-2 bg-surface-container border border-outline-variant rounded-full font-data-point text-data-point text-on-surface-variant hover:border-secondary transition-colors cursor-default">Data Warehousing</span>
+</div>
+</section>
+<!-- Projects Overview -->
+<section class="mb-section-gap" id="projects">
+<div class="flex justify-between items-end mb-12">
+<div>
+<div class="flex items-center gap-4 mb-4">
+<span class="h-[1px] w-12 bg-tertiary"></span>
+<h2 class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Selected Works</h2>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Core Projects</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Project Card 1 -->
+<article class="glass-border-gradient rounded-xl p-6 group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden flex flex-col min-h-[400px]">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-4 opacity-70 group-hover:opacity-100 transition-opacity">Predictive Analytics</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Customer Churn Model</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Developed a machine learning model using Python and Scikit-learn to predict customer churn, achieving 89% accuracy and identifying key retention drivers for the marketing team.</p>
+<div class="mt-auto">
+<div class="flex gap-2 mb-6">
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-data-point text-secondary">Python</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-data-point text-secondary">Scikit-learn</span>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-secondary transition-colors" href="#">
+                            Explore Case Study <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="absolute bottom-0 right-0 p-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]">analytics</span>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="glass-border-gradient rounded-xl p-6 group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden flex flex-col min-h-[400px]">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-4 opacity-70 group-hover:opacity-100 transition-opacity">Business Intelligence</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Global Sales Dashboard</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Engineered an interactive Power BI dashboard integrating multiple SQL databases to visualize real-time global sales performance, reducing reporting time by 15 hours weekly.</p>
+<div class="mt-auto">
+<div class="flex gap-2 mb-6">
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-data-point text-secondary">Power BI</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-data-point text-secondary">SQL</span>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-secondary transition-colors" href="#">
+                            Explore Case Study <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="absolute bottom-0 right-0 p-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]">monitoring</span>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-background border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div>
+<div class="font-headline-sm text-headline-sm text-primary mb-4 opacity-80 hover:opacity-100 transition-opacity">K.CHITRANSHU</div>
+<p class="font-label-caps text-label-caps text-tertiary">© 2024 Kumar Chitranshu. Architecting insights through data.</p>
+</div>
+<div class="flex flex-wrap gap-8 md:justify-end items-start font-label-caps text-label-caps">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

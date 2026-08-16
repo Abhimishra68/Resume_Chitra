@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  
+  body {
+    background: radial-gradient(ellipse at 50% -20%, #112540 0%, #07122A 60%, #030712 100%);
+    color: #D9E2FF;
+    font-family: 'Hanken Grotesk', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #07122A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #151F37;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00F0FF;
+  }
+}
+
+/* Glassmorphic Cards & Panels matching Stitch */
+.glass-panel {
+  background: rgba(16, 27, 51, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 240, 255, 0.45);
+  box-shadow: 0 10px 40px -10px rgba(0, 240, 255, 0.18);
+}
+
+.glass-pill {
+  background: rgba(21, 31, 55, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  transition: all 0.25s ease;
+}
+
+.glass-pill:hover {
+  border-color: rgba(0, 240, 255, 0.6);
+  color: #00F0FF;
+  transform: translateY(-1px);
+}
+
+/* Microscopic technical dot grid texture */
+.ambient-grid {
+  background-image: radial-gradient(rgba(0, 240, 255, 0.06) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+}
+
+/* Custom Cursor Elements */
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #00F0FF;
+  border-radius: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 0 10px #00F0FF, 0 0 20px #00F0FF;
+}
+
+.cursor-ring {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 50%;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.cursor-ring.cursor-hover {
+  width: 54px;
+  height: 54px;
+  background-color: rgba(0, 240, 255, 0.08);
+  border-color: rgba(0, 240, 255, 0.8);
+}
