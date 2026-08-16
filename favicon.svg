@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 150 150" fill="none">
+  <defs>
+    <!-- Sharp Neon Glow Filter -->
+    <filter id="kc-neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.0" result="blur1" />
+      <feGaussianBlur stdDeviation="2.5" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="kc-block-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B182B" />
+      <stop offset="50%" stop-color="#071224" />
+      <stop offset="100%" stop-color="#0D1E36" />
+    </linearGradient>
+
+    <linearGradient id="kc-block-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#254B78" />
+      <stop offset="50%" stop-color="#17355B" />
+      <stop offset="100%" stop-color="#2A5990" />
+    </linearGradient>
+
+    <linearGradient id="kc-cyan-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7CFAFF" />
+      <stop offset="60%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#00C0DE" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. LETTER 'C' BASE LAYER -->
+  <path
+    d="M 128 36 A 30 30 0 1 0 128 74 L 119 67 A 18 18 0 1 1 119 43 Z"
+    fill="url(#kc-block-fill)"
+    stroke="url(#kc-block-stroke)"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+  />
+
+  <!-- 2. LETTER 'K' BASE LAYER -->
+  <path
+    d="M 22 20 L 36 20 L 36 45 L 80 23 L 80 35 L 44 53 L 44 57 L 80 75 L 80 87 L 36 65 L 36 90 L 22 90 Z"
+    fill="url(#kc-block-fill)"
+    stroke="url(#kc-block-stroke)"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+  />
+
+  <!-- 3. LETTER 'K' NEON CIRCUIT TRACES & NODES -->
+  <path
+    d="M 29 29 L 29 78"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    filter="url(#kc-neon-glow)"
+  />
+
+  <circle
+    cx="29"
+    cy="29"
+    r="3.2"
+    stroke="#00F0FF"
+    stroke-width="1.8"
+    fill="#081426"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle cx="29" cy="29" r="1.0" fill="#00F0FF" />
+
+  <path
+    d="M 29 45 L 25 45"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.0"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle
+    cx="25"
+    cy="45"
+    r="2.8"
+    stroke="#00F0FF"
+    stroke-width="1.5"
+    fill="#081426"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle cx="25" cy="45" r="0.8" fill="#00F0FF" />
+
+  <path
+    d="M 25 53 L 25 65"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    filter="url(#kc-neon-glow)"
+  />
+
+  <path
+    d="M 29 72 L 25 72"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.0"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle
+    cx="25"
+    cy="72"
+    r="2.8"
+    stroke="#00F0FF"
+    stroke-width="1.5"
+    fill="#081426"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle cx="25" cy="72" r="0.8" fill="#00F0FF" />
+
+  <path
+    d="M 42 55 L 72 29"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    filter="url(#kc-neon-glow)"
+  />
+
+  <circle
+    cx="72"
+    cy="29"
+    r="3.2"
+    stroke="#00F0FF"
+    stroke-width="1.8"
+    fill="#081426"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle cx="72" cy="29" r="1.0" fill="#00F0FF" />
+
+  <path
+    d="M 42 55 L 72 81"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    filter="url(#kc-neon-glow)"
+  />
+
+  <circle
+    cx="72"
+    cy="81"
+    r="3.2"
+    stroke="#00F0FF"
+    stroke-width="1.8"
+    fill="#081426"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle cx="72" cy="81" r="1.0" fill="#00F0FF" />
+
+  <!-- 4. LETTER 'C' NEON CIRCUIT TRACES & NODES -->
+  <path
+    d="M 81 55 A 24 24 0 0 1 125 41"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    filter="url(#kc-neon-glow)"
+  />
+
+  <circle
+    cx="125"
+    cy="41"
+    r="3.2"
+    stroke="#00F0FF"
+    stroke-width="1.8"
+    fill="#081426"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle cx="125" cy="41" r="1.0" fill="#00F0FF" />
+
+  <circle
+    cx="81"
+    cy="55"
+    r="3.2"
+    stroke="#00F0FF"
+    stroke-width="1.8"
+    fill="#081426"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle cx="81" cy="55" r="1.0" fill="#00F0FF" />
+
+  <path
+    d="M 82 61 A 24 24 0 0 1 84 67"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    filter="url(#kc-neon-glow)"
+  />
+
+  <path
+    d="M 88 72 A 24 24 0 0 0 125 69"
+    stroke="url(#kc-cyan-grad)"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    filter="url(#kc-neon-glow)"
+  />
+
+  <circle
+    cx="125"
+    cy="69"
+    r="3.2"
+    stroke="#00F0FF"
+    stroke-width="1.8"
+    fill="#081426"
+    filter="url(#kc-neon-glow)"
+  />
+  <circle cx="125" cy="69" r="1.0" fill="#00F0FF" />
+</svg>
