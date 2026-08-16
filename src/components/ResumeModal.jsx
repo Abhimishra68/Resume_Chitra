@@ -22,7 +22,7 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           <div className="flex items-center gap-3">
             <a 
-              href="/screenshots/resume_a4.jpg" 
+              href="screenshots/resume_a4.jpg" 
               download="Kumar_Chitranshu_Resume.jpg"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan text-void font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(0,240,255,0.3)]"
             >
@@ -43,7 +43,7 @@ export default function ResumeModal({ isOpen, onClose }) {
         {/* Document Frame */}
         <div className="flex-grow overflow-y-auto flex justify-center bg-[#02050c] rounded-xl p-4 border border-white/5 shadow-inner">
           <img 
-            src="/screenshots/resume_a4.jpg" 
+            src="screenshots/resume_a4.jpg" 
             alt="Kumar Chitranshu Resume Document" 
             className="max-w-full h-auto object-contain rounded shadow-2xl"
           />

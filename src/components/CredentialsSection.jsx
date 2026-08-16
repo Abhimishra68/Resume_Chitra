@@ -87,7 +87,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-PROF",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Google Data Analytics Professional Certificate — Google.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Google Data Analytics Professional Certificate — Google.pdf",
           skills: ["SQL", "Tableau", "R Programming", "Data Cleaning", "Data Visualization"],
           description: "Main specialization credential verifying capabilities across the 8 data analytics core modules, culminating in a detailed business case study report."
         },
@@ -96,7 +96,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-FND",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Foundations_ Data_Data_ Everywhere.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Foundations_ Data_Data_ Everywhere.pdf",
           skills: ["Data Ecosystem", "Analytical Thinking", "Spreadsheets"],
           description: "Introduction to spreadsheets, data types, analytical structures, and modern database ecosystems."
         },
@@ -105,7 +105,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-ASK",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Ask Questions to Make Data-Driven Decisions.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Ask Questions to Make Data-Driven Decisions.pdf",
           skills: ["KPI Definition", "Structured Thinking", "Communication"],
           description: "Focuses on metrics planning, asking operational questions, business requirements definitions, and defining target KPIs."
         },
@@ -114,7 +114,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-PREP",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Prepare Data for Exploration.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Prepare Data for Exploration.pdf",
           skills: ["Data Credibility", "Database Schemas", "Metadata"],
           description: "Data storage techniques, verifying dataset bias, auditing data source reliability, and spreadsheet data prep."
         },
@@ -123,7 +123,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-PROC",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Process Data from Dirty to Clean.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Process Data from Dirty to Clean.pdf",
           skills: ["Data Cleaning", "SQL (BigQuery)", "Data Integrity"],
           description: "Mastering advanced cleaning queries (filtering, trimming, CTE transformations, handling nulls) inside databases."
         },
@@ -132,7 +132,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-ANLY",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Analyze Data to Answer Questions.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Analyze Data to Answer Questions.pdf",
           skills: ["SQL Aggregations", "Data Calculations", "Formatting"],
           description: "Applying SQL queries (JOINs, aggregations, CTEs) and formulas to calculate metrics and extract descriptive statistics."
         },
@@ -141,7 +141,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-SHR",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Share Data Through the Art of Visualization.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Share Data Through the Art of Visualization.pdf",
           skills: ["Tableau", "Data Storytelling", "Dashboards"],
           description: "Designing dashboards and presentation decks using Tableau to communicate data insights to non-technical stakeholders."
         },
@@ -150,7 +150,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-CAP",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Google Data Analytics Capstone_ Complete a Case Study.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Google Data Analytics Capstone_ Complete a Case Study.pdf",
           skills: ["Portfolio Project", "Problem Solving", "Independent Analysis"],
           description: "A comprehensive project completing a real-world case study from scratch, including data cleaning, analysis, and dashboard delivery."
         },
@@ -159,7 +159,7 @@ export default function CredentialsSection() {
           issuer: "Google / Coursera",
           code: "GDA-AI",
           accent: "#00F0FF",
-          pdf: "/certificates/Courses/Google_Data_Analytics/Accelerate Your Job Search with AI.pdf",
+          pdf: "certificates/Courses/Google_Data_Analytics/Accelerate Your Job Search with AI.pdf",
           skills: ["Generative AI", "Resume Optimization", "Interview Prep"],
           description: "Covers utilizing Generative AI tools to optimize technical resumes, prepare portfolios, and practice technical case-study interviews."
         }
@@ -178,7 +178,7 @@ export default function CredentialsSection() {
           issuer: "IBM / Coursera",
           code: "IBM-ML-PROF",
           accent: "#818cf8",
-          pdf: "/certificates/Courses/IBM/IBM(main).pdf",
+          pdf: "certificates/Courses/IBM/IBM(main).pdf",
           skills: ["Apache Spark", "Hadoop", "NoSQL", "Distributed ML"],
           description: "Main specialization credential verifying capability across the whole big data pipeline—ingesting data in Hadoop, storing in NoSQL, and scaling models in Spark."
         },
@@ -187,7 +187,7 @@ export default function CredentialsSection() {
           issuer: "IBM / Coursera",
           code: "IBM-SPK",
           accent: "#818cf8",
-          pdf: "/certificates/Courses/IBM/Introduction to Big Data with Spark and Hadoop.pdf",
+          pdf: "certificates/Courses/IBM/Introduction to Big Data with Spark and Hadoop.pdf",
           skills: ["Apache Spark", "Hadoop", "MapReduce", "Hive"],
           description: "Introduction to distributed data architectures, HiveQL queries, MapReduce programming, and Spark cluster computing pipelines."
         },
@@ -196,7 +196,7 @@ export default function CredentialsSection() {
           issuer: "IBM / Coursera",
           code: "IBM-NOSQL",
           accent: "#818cf8",
-          pdf: "/certificates/Courses/IBM/Introduction to NoSQL Databases.pdf",
+          pdf: "certificates/Courses/IBM/Introduction to NoSQL Databases.pdf",
           skills: ["MongoDB", "Cassandra", "Document Databases", "Wide-Column Stores"],
           description: "Hands-on database operations covering document databases (MongoDB) and wide-column datastores (Apache Cassandra)."
         },
@@ -205,7 +205,7 @@ export default function CredentialsSection() {
           issuer: "IBM / Coursera",
           code: "IBM-ML-SPK",
           accent: "#818cf8",
-          pdf: "/certificates/Courses/IBM/Machine Learning with Apache Spark.pdf",
+          pdf: "certificates/Courses/IBM/Machine Learning with Apache Spark.pdf",
           skills: ["Spark MLlib", "Feature Engineering", "Model Evaluation"],
           description: "Deploying supervised/unsupervised machine learning classifiers on large-scale datasets using Spark MLlib pipelines."
         }
@@ -224,7 +224,7 @@ export default function CredentialsSection() {
           issuer: "University of Michigan",
           code: "UMICH-PY-PROF",
           accent: "#f59e0b",
-          pdf: "/certificates/Courses/University of Michigan(PYTHON)/Python for Everybody(main).pdf",
+          pdf: "certificates/Courses/University of Michigan(PYTHON)/Python for Everybody(main).pdf",
           skills: ["Python", "JSON/XML parsing", "SQLite", "Data Visualization"],
           description: "Validates comprehensive competencies across the 5 core Python sub-courses including basic programming logic, SQL databases, and web scraping."
         },
@@ -233,7 +233,7 @@ export default function CredentialsSection() {
           issuer: "University of Michigan",
           code: "UMICH-PY-BEG",
           accent: "#f59e0b",
-          pdf: "/certificates/Courses/University of Michigan(PYTHON)/Programming for Everybody_python.pdf",
+          pdf: "certificates/Courses/University of Michigan(PYTHON)/Programming for Everybody_python.pdf",
           skills: ["Python Syntax", "Control Flow", "Functions"],
           description: "Basic programming concepts using Python, focusing on loops, functions, variables, and logic flow."
         },
@@ -242,7 +242,7 @@ export default function CredentialsSection() {
           issuer: "University of Michigan",
           code: "UMICH-PY-DS",
           accent: "#f59e0b",
-          pdf: "/certificates/Courses/University of Michigan(PYTHON)/Python Data Structures.pdf",
+          pdf: "certificates/Courses/University of Michigan(PYTHON)/Python Data Structures.pdf",
           skills: ["Lists", "Dictionaries", "Tuples", "File I/O"],
           description: "Advanced Python data structures and operations to process text logs and clean unstructured flat files."
         },
@@ -251,7 +251,7 @@ export default function CredentialsSection() {
           issuer: "University of Michigan",
           code: "UMICH-PY-WEB",
           accent: "#f59e0b",
-          pdf: "/certificates/Courses/University of Michigan(PYTHON)/Using Python to Access Web Data.pdf",
+          pdf: "certificates/Courses/University of Michigan(PYTHON)/Using Python to Access Web Data.pdf",
           skills: ["Web Scraping", "BeautifulSoup", "APIs", "XML/JSON"],
           description: "Constructing HTTP connections, scraping DOM elements using BeautifulSoup, and parsing JSON/XML payloads from RESTful APIs."
         },
@@ -260,7 +260,7 @@ export default function CredentialsSection() {
           issuer: "University of Michigan",
           code: "UMICH-PY-DB",
           accent: "#f59e0b",
-          pdf: "/certificates/Courses/University of Michigan(PYTHON)/Using Databases with Python.pdf",
+          pdf: "certificates/Courses/University of Michigan(PYTHON)/Using Databases with Python.pdf",
           skills: ["SQLite", "Relational Databases", "Many-to-Many Relationships"],
           description: "Creating SQLite schemas, populating tables, and configuring join models and primary/foreign key connections."
         },
@@ -269,7 +269,7 @@ export default function CredentialsSection() {
           issuer: "University of Michigan",
           code: "UMICH-PY-CAP",
           accent: "#f59e0b",
-          pdf: "/certificates/Courses/University of Michigan(PYTHON)/Capstone_Retrieving_Processing_ and Visualizing.pdf",
+          pdf: "certificates/Courses/University of Michigan(PYTHON)/Capstone_Retrieving_Processing_ and Visualizing.pdf",
           skills: ["D3.js", "Data Wrangling", "Data Clustering"],
           description: "Aggregating raw web data, clean transforming using custom scripts, storing in relational SQL, and generating interactive D3.js visual charts."
         }
@@ -288,7 +288,7 @@ export default function CredentialsSection() {
           issuer: "NPTEL",
           code: "NPTEL-ML-2024",
           accent: "#64FFDA",
-          pdf: "/certificates/Courses/Introduction to Machine Learning-NPTEL.pdf",
+          pdf: "certificates/Courses/Introduction to Machine Learning-NPTEL.pdf",
           skills: ["Neural Networks", "SVM", "Decision Trees", "ML Math"],
           description: "Rigorous academic certification verifying understanding of the mathematical and algorithmic foundations of classification, clustering, and regression models."
         },
@@ -297,7 +297,7 @@ export default function CredentialsSection() {
           issuer: "Udemy / Online",
           code: "UDEMY-DNN",
           accent: "#64FFDA",
-          pdf: "/certificates/Courses/Deep Neural Network for Beginners Using Python.pdf",
+          pdf: "certificates/Courses/Deep Neural Network for Beginners Using Python.pdf",
           skills: ["Deep Learning", "Keras", "TensorFlow", "Neural Networks"],
           description: "Applied introduction to multi-layer perceptrons, backpropagation algorithms, Keras/TensorFlow model construction, and optimization."
         },
@@ -306,7 +306,7 @@ export default function CredentialsSection() {
           issuer: "Coursera",
           code: "DESIGN-THINK",
           accent: "#64FFDA",
-          pdf: "/certificates/Courses/Innovation Through Design Think, Make, Break, Repeat.pdf",
+          pdf: "certificates/Courses/Innovation Through Design Think, Make, Break, Repeat.pdf",
           skills: ["Design Thinking", "Prototyping", "User Research"],
           description: "A credential focused on human-centered design frameworks, prototyping methodologies, and iterative testing strategies."
         },
@@ -315,7 +315,7 @@ export default function CredentialsSection() {
           issuer: "Coursera",
           code: "PAPER-WRITE",
           accent: "#64FFDA",
-          pdf: "/certificates/Courses/How to Write and Publish a Scientific Paper.pdf",
+          pdf: "certificates/Courses/How to Write and Publish a Scientific Paper.pdf",
           skills: ["Technical Writing", "Academic Publishing", "Structure"],
           description: "Covers the formatting, structure, ethics, and publishing process for drafting high-impact technical manuscripts and data reports."
         },
@@ -324,7 +324,7 @@ export default function CredentialsSection() {
           issuer: "Coursera",
           code: "SUSTAIN-GOAL",
           accent: "#64FFDA",
-          pdf: "/certificates/Courses/The Sustainable Development Goals.pdf",
+          pdf: "certificates/Courses/The Sustainable Development Goals.pdf",
           skills: ["Global Governance", "Sustainability", "Impact Analysis"],
           description: "Explores the 17 UN Sustainable Development Goals, analyzing environmental policy, resource management, and social impact variables."
         }
@@ -343,7 +343,7 @@ export default function CredentialsSection() {
           issuer: "Prernagati",
           code: "PRER-ML-INT",
           accent: "#38bdf8",
-          pdf: "/certificates/Internship/Machine-Learning-with-Python-Prernagati.pdf",
+          pdf: "certificates/Internship/Machine-Learning-with-Python-Prernagati.pdf",
           skills: ["Model Pipelines", "Data Wrangling", "Scikit-Learn", "Feature Selection"],
           description: "Validates internship outputs including importing customer transactional tables, cleaning outliers, resolving class skewness, training scikit-learn models, and reporting parameters."
         }
