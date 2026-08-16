@@ -12,7 +12,7 @@ export default function Footer({ onContactClick }) {
         {/* Social Icons */}
         <div class="flex items-center gap-6 mb-8 text-on-surface-variant">
           <a 
-            href="https://github.com/chitranshu07-coder" 
+            href="https://github.com/Abhimishra68" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="hover:text-secondary transition-colors"

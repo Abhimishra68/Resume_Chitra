@@ -94,7 +94,7 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
             {/* Social Quick Links */}
             <div className="flex items-center gap-3 pl-2 sm:pl-4 border-l border-white/10">
               <a
-                href="https://github.com/chitranshu07-coder"
+                href="https://github.com/Abhimishra68"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-[#101B33] border border-white/10 text-[#8892B0] hover:text-[#00F0FF] hover:border-[#00F0FF]/40 transition-all"

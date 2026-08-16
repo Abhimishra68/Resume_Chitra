@@ -9,7 +9,7 @@ export default function ProjectsSection() {
       title: "T20 World Cup Cricket Analytics: Best Playing XI",
       tags: ["Python", "Web Scraping", "Power BI", "DAX"],
       synopsis: "Web-scraped live tournament data into analysis-ready datasets, defined batting/bowling/role-based player KPIs, and built an interactive Power BI dashboard with DAX measures to data-drive a Best Playing XI selection.",
-      github: "https://github.com/chitranshu07-coder",
+      github: "https://github.com/Abhimishra68/Resume_Chitra",
       accent: "#00F0FF",
       category: "Sports Analytics / KPI Modeling",
       details: [
@@ -71,7 +71,7 @@ export default function ProjectsSection() {
       title: "Customer Shopping Behavior Analysis",
       tags: ["Python", "SQL", "Power BI"],
       synopsis: "Cleaned and modeled shopping data with Python/Pandas, used SQL to surface customer segments, loyalty patterns and purchase drivers, then built a Power BI dashboard tracking the resulting KPIs.",
-      github: "https://github.com/chitranshu07-coder",
+      github: "https://github.com/Abhimishra68/Resume_Chitra",
       accent: "#00F0FF",
       category: "Customer Analytics / RFM Segmentation",
       details: [
@@ -115,7 +115,7 @@ export default function ProjectsSection() {
       title: "Meta Ad Performance Analysis",
       tags: ["SQL", "Python", "Excel", "Power BI"],
       synopsis: "Cleaned Meta advertising data with Python and Excel, used SQL to evaluate campaign KPIs and performance patterns, and consolidated everything into a stakeholder-ready Power BI dashboard.",
-      github: "https://github.com/chitranshu07-coder",
+      github: "https://github.com/Abhimishra68/Resume_Chitra",
       accent: "#818cf8",
       category: "Marketing Analytics / Paid Media",
       details: [
