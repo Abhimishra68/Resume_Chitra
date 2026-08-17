@@ -129,8 +129,8 @@ export default function AboutSection() {
               label="End-to-End Projects" 
             />
             <StatCounter 
-              target={4} 
-              suffix="" 
+              target={25} 
+              suffix="+" 
               label="Certifications" 
             />
             <StatCounter 
