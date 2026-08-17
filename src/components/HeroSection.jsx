@@ -19,56 +19,80 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
-        @keyframes visual-beep {
-          0%, 100% {
-            text-shadow: none;
-            color: #8892B0;
-            opacity: 0.6;
-          }
-          /* Beep 1: Cyan */
-          2%, 6% {
-            text-shadow: 0 0 4px rgba(0, 240, 255, 0.4), 0 0 12px rgba(0, 240, 255, 0.6), 0 0 25px rgba(0, 240, 255, 0.8);
-            color: #00F0FF;
-            opacity: 1;
-          }
-          10% {
-            text-shadow: none;
-            color: #8892B0;
-            opacity: 0.6;
-          }
+        @keyframes beep-index-0 {
+          0%, 100% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 1: Red */
+          2%, 6% { text-shadow: 0 0 4px rgba(255, 59, 48, 0.4), 0 0 12px rgba(255, 59, 48, 0.6), 0 0 25px rgba(255, 59, 48, 0.8); color: #FF3B30; opacity: 1; }
+          10% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 2: Blue */
+          27%, 31% { text-shadow: 0 0 4px rgba(112, 165, 255, 0.4), 0 0 12px rgba(112, 165, 255, 0.6), 0 0 25px rgba(112, 165, 255, 0.8); color: #70A5FF; opacity: 1; }
+          35% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 3: Yellow */
+          52%, 56% { text-shadow: 0 0 4px rgba(255, 183, 0, 0.4), 0 0 12px rgba(255, 183, 0, 0.6), 0 0 25px rgba(255, 183, 0, 0.8); color: #FFB700; opacity: 1; }
+          60% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 4: Cyan */
+          77%, 81% { text-shadow: 0 0 4px rgba(0, 240, 255, 0.4), 0 0 12px rgba(0, 240, 255, 0.6), 0 0 25px rgba(0, 240, 255, 0.8); color: #00F0FF; opacity: 1; }
+          85% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+        }
+        @keyframes beep-index-1 {
+          0%, 100% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 1: Blue */
+          2%, 6% { text-shadow: 0 0 4px rgba(112, 165, 255, 0.4), 0 0 12px rgba(112, 165, 255, 0.6), 0 0 25px rgba(112, 165, 255, 0.8); color: #70A5FF; opacity: 1; }
+          10% { text-shadow: none; color: #8892B0; opacity: 0.6; }
           /* Beep 2: Yellow */
-          27%, 31% {
-            text-shadow: 0 0 4px rgba(255, 183, 0, 0.4), 0 0 12px rgba(255, 183, 0, 0.6), 0 0 25px rgba(255, 183, 0, 0.8);
-            color: #FFB700;
-            opacity: 1;
-          }
-          35% {
-            text-shadow: none;
-            color: #8892B0;
-            opacity: 0.6;
-          }
+          27%, 31% { text-shadow: 0 0 4px rgba(255, 183, 0, 0.4), 0 0 12px rgba(255, 183, 0, 0.6), 0 0 25px rgba(255, 183, 0, 0.8); color: #FFB700; opacity: 1; }
+          35% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 3: Cyan */
+          52%, 56% { text-shadow: 0 0 4px rgba(0, 240, 255, 0.4), 0 0 12px rgba(0, 240, 255, 0.6), 0 0 25px rgba(0, 240, 255, 0.8); color: #00F0FF; opacity: 1; }
+          60% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 4: Orange */
+          77%, 81% { text-shadow: 0 0 4px rgba(255, 127, 80, 0.4), 0 0 12px rgba(255, 127, 80, 0.6), 0 0 25px rgba(255, 127, 80, 0.8); color: #FF7F50; opacity: 1; }
+          85% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+        }
+        @keyframes beep-index-2 {
+          0%, 100% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 1: Yellow */
+          2%, 6% { text-shadow: 0 0 4px rgba(255, 183, 0, 0.4), 0 0 12px rgba(255, 183, 0, 0.6), 0 0 25px rgba(255, 183, 0, 0.8); color: #FFB700; opacity: 1; }
+          10% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 2: Cyan */
+          27%, 31% { text-shadow: 0 0 4px rgba(0, 240, 255, 0.4), 0 0 12px rgba(0, 240, 255, 0.6), 0 0 25px rgba(0, 240, 255, 0.8); color: #00F0FF; opacity: 1; }
+          35% { text-shadow: none; color: #8892B0; opacity: 0.6; }
           /* Beep 3: Orange */
-          52%, 56% {
-            text-shadow: 0 0 4px rgba(255, 127, 80, 0.4), 0 0 12px rgba(255, 127, 80, 0.6), 0 0 25px rgba(255, 127, 80, 0.8);
-            color: #FF7F50;
-            opacity: 1;
-          }
-          60% {
-            text-shadow: none;
-            color: #8892B0;
-            opacity: 0.6;
-          }
+          52%, 56% { text-shadow: 0 0 4px rgba(255, 127, 80, 0.4), 0 0 12px rgba(255, 127, 80, 0.6), 0 0 25px rgba(255, 127, 80, 0.8); color: #FF7F50; opacity: 1; }
+          60% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 4: Red */
+          77%, 81% { text-shadow: 0 0 4px rgba(255, 59, 48, 0.4), 0 0 12px rgba(255, 59, 48, 0.6), 0 0 25px rgba(255, 59, 48, 0.8); color: #FF3B30; opacity: 1; }
+          85% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+        }
+        @keyframes beep-index-3 {
+          0%, 100% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 1: Cyan */
+          2%, 6% { text-shadow: 0 0 4px rgba(0, 240, 255, 0.4), 0 0 12px rgba(0, 240, 255, 0.6), 0 0 25px rgba(0, 240, 255, 0.8); color: #00F0FF; opacity: 1; }
+          10% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 2: Orange */
+          27%, 31% { text-shadow: 0 0 4px rgba(255, 127, 80, 0.4), 0 0 12px rgba(255, 127, 80, 0.6), 0 0 25px rgba(255, 127, 80, 0.8); color: #FF7F50; opacity: 1; }
+          35% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 3: Red */
+          52%, 56% { text-shadow: 0 0 4px rgba(255, 59, 48, 0.4), 0 0 12px rgba(255, 59, 48, 0.6), 0 0 25px rgba(255, 59, 48, 0.8); color: #FF3B30; opacity: 1; }
+          60% { text-shadow: none; color: #8892B0; opacity: 0.6; }
           /* Beep 4: Blue */
-          77%, 81% {
-            text-shadow: 0 0 4px rgba(112, 165, 255, 0.4), 0 0 12px rgba(112, 165, 255, 0.6), 0 0 25px rgba(112, 165, 255, 0.8);
-            color: #70A5FF;
-            opacity: 1;
-          }
-          85% {
-            text-shadow: none;
-            color: #8892B0;
-            opacity: 0.6;
-          }
+          77%, 81% { text-shadow: 0 0 4px rgba(112, 165, 255, 0.4), 0 0 12px rgba(112, 165, 255, 0.6), 0 0 25px rgba(112, 165, 255, 0.8); color: #70A5FF; opacity: 1; }
+          85% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+        }
+        @keyframes beep-index-4 {
+          0%, 100% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 1: Orange */
+          2%, 6% { text-shadow: 0 0 4px rgba(255, 127, 80, 0.4), 0 0 12px rgba(255, 127, 80, 0.6), 0 0 25px rgba(255, 127, 80, 0.8); color: #FF7F50; opacity: 1; }
+          10% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 2: Red */
+          27%, 31% { text-shadow: 0 0 4px rgba(255, 59, 48, 0.4), 0 0 12px rgba(255, 59, 48, 0.6), 0 0 25px rgba(255, 59, 48, 0.8); color: #FF3B30; opacity: 1; }
+          35% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 3: Blue */
+          52%, 56% { text-shadow: 0 0 4px rgba(112, 165, 255, 0.4), 0 0 12px rgba(112, 165, 255, 0.6), 0 0 25px rgba(112, 165, 255, 0.8); color: #70A5FF; opacity: 1; }
+          60% { text-shadow: none; color: #8892B0; opacity: 0.6; }
+          /* Beep 4: Yellow */
+          77%, 81% { text-shadow: 0 0 4px rgba(255, 183, 0, 0.4), 0 0 12px rgba(255, 183, 0, 0.6), 0 0 25px rgba(255, 183, 0, 0.8); color: #FFB700; opacity: 1; }
+          85% { text-shadow: none; color: #8892B0; opacity: 0.6; }
         }
         .animate-float-1 {
           animation: float-card-1 6s ease-in-out infinite;
@@ -79,20 +103,53 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
         .animate-sweep {
           animation: radar-sweep 8s linear infinite;
         }
-        .beep-text {
-          animation: visual-beep 8s linear infinite;
+        .beep-0 { animation: beep-index-0 8s linear infinite; }
+        .beep-1 { animation: beep-index-1 8s linear infinite; }
+        .beep-2 { animation: beep-index-2 8s linear infinite; }
+        .beep-3 { animation: beep-index-3 8s linear infinite; }
+        .beep-4 { animation: beep-index-4 8s linear infinite; }
+
+        @keyframes shine-wave {
+          0% {
+            background-position: -200% center;
+          }
+          100% {
+            background-position: 200% center;
+          }
         }
-        .delay-1 {
-          animation-delay: 0.18s;
+        .shine-silver-wave {
+          background: linear-gradient(
+            120deg, 
+            #D9E2FF 0%, 
+            #D9E2FF 40%, 
+            #ffffff 50%, 
+            #D9E2FF 60%, 
+            #D9E2FF 100%
+          );
+          background-size: 200% auto;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          -webkit-text-fill-color: transparent;
+          animation: shine-wave 6s linear infinite;
         }
-        .delay-2 {
-          animation-delay: 0.36s;
-        }
-        .delay-3 {
-          animation-delay: 0.54s;
-        }
-        .delay-4 {
-          animation-delay: 0.72s;
+        .shine-text-wave {
+          background: linear-gradient(
+            120deg, 
+            #D9E2FF 0%, 
+            #CCD6F6 25%, 
+            #ffffff 45%, 
+            #ffffff 55%, 
+            #00F0FF 75%, 
+            #D9E2FF 100%
+          );
+          background-size: 200% auto;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          -webkit-text-fill-color: transparent;
+          animation: shine-wave 6s linear infinite;
+          animation-delay: 0.3s;
         }
       `}</style>
 
@@ -117,27 +174,27 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
 
           {/* Main Display Headline in Literata Serif */}
           <div className="space-y-3">
-            <h1 className="font-headline font-bold text-4xl xs:text-5xl sm:text-7xl md:text-8xl tracking-tight text-[#D9E2FF] leading-[1.05]">
-              KUMAR <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D9E2FF] via-[#CCD6F6] to-[#00F0FF]">
+            <h1 className="font-headline font-bold text-4xl xs:text-5xl sm:text-7xl md:text-8xl tracking-tight leading-[1.05]">
+              <span className="shine-silver-wave">KUMAR</span> <br className="hidden sm:inline" />
+              <span className="shine-text-wave">
                 CHITRANSHU
               </span>
             </h1>
 
             {/* Signature Monospace Discipline Label */}
             <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 pt-2 select-none">
-              <span className="font-mono text-xs sm:text-sm sm:text-base md:text-lg font-medium tracking-wide beep-text">
+              <span className="font-mono text-xs sm:text-sm sm:text-base md:text-lg font-medium tracking-wide beep-0">
                 Data Analyst
               </span>
               <span className="text-[#8892B0] font-mono hidden xs:inline opacity-50">—</span>
               <span className="font-mono text-[10px] sm:text-xs sm:text-sm md:text-base tracking-wide flex items-center gap-2">
-                <span className="beep-text delay-1">Python</span>
+                <span className="beep-1">Python</span>
                 <span className="text-[#8892B0]/40">•</span>
-                <span className="beep-text delay-2">SQL</span>
+                <span className="beep-2">SQL</span>
                 <span className="text-[#8892B0]/40">•</span>
-                <span className="beep-text delay-3">Power BI</span>
+                <span className="beep-3">Power BI</span>
                 <span className="text-[#8892B0]/40">•</span>
-                <span className="beep-text delay-4">PostgreSQL</span>
+                <span className="beep-4">PostgreSQL</span>
               </span>
             </div>
           </div>
@@ -205,7 +262,7 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
         </div>
 
         {/* Right Column: Dynamic Data Lab Graphic (Cols 8-12) */}
-        <div className="lg:col-span-5 relative w-full flex items-center justify-center min-h-[350px] lg:min-h-[480px]">
+        <div className="hidden lg:flex lg:col-span-5 relative w-full items-center justify-center min-h-[480px]">
           
           {/* Subtle Graphic Glow Backdrop */}
           <div className="absolute w-72 h-72 bg-[#00F0FF]/[0.08] rounded-full blur-[80px] pointer-events-none z-0"></div>

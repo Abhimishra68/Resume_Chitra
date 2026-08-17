@@ -571,6 +571,11 @@ export default function ProjectsSection() {
               {selectedCaseStudy.title}
             </h3>
 
+            {/* Dashboard Visual Preview */}
+            <div className="w-full rounded-xl overflow-hidden border border-white/[0.08] mb-6 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+              <ProjectThumbnail project={selectedCaseStudy} />
+            </div>
+
             <p className="font-body text-[#C5C6CD] text-sm sm:text-base leading-relaxed mb-6 pb-6 border-b border-white/[0.08]">
               {selectedCaseStudy.synopsis}
             </p>
