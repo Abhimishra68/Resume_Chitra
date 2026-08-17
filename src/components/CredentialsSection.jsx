@@ -589,7 +589,10 @@ export default function CredentialsSection() {
 
       {/* Certification Details & Snapshot Modal */}
       {selectedCert && (
-        <div className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-4 sm:p-6 overflow-y-auto bg-[#07122A]/85 backdrop-blur-xl animate-in fade-in duration-200">
+        <div 
+          className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-4 sm:p-6 overflow-y-auto bg-[#07122A]/85 backdrop-blur-xl animate-in fade-in duration-200"
+          onClick={() => setSelectedCert(null)}
+        >
           <div 
             className="relative w-full max-w-2xl glass-panel rounded-2xl pt-12 pb-6 px-5 sm:p-8 my-auto border border-[#00F0FF]/30 shadow-[0_0_50px_rgba(0,240,255,0.15)] animate-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()}

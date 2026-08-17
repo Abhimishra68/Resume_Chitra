@@ -51,7 +51,7 @@ export default function ConnectModal({ isOpen, onClose }) {
             </p>
             <button 
               onClick={handleReset}
-              className="mt-6 px-8 py-3 rounded-full bg-cyan text-void font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white transition-all"
+              className="mt-6 px-8 py-3 rounded-full bg-cyan text-primary font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white transition-all"
             >
               Done
             </button>
@@ -112,7 +112,7 @@ export default function ConnectModal({ isOpen, onClose }) {
 
             <button 
               type="submit"
-              className="w-full py-3.5 rounded-xl bg-cyan text-void font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white hover:shadow-[0_0_25px_rgba(0,240,255,0.3)] transition-all flex items-center justify-center gap-2"
+              className="w-full py-3.5 rounded-xl bg-cyan text-primary font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white hover:shadow-[0_0_25px_rgba(0,240,255,0.3)] transition-all flex items-center justify-center gap-2"
             >
               <span>Transmit Message</span>
               <span className="material-symbols-outlined text-base">send</span>

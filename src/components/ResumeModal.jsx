@@ -30,7 +30,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             <a 
               href={resumeUrl} 
               download="Kumar_Chitranshu_Resume.jpg"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan text-void font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(0,240,255,0.3)]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan text-primary font-mono text-xs font-semibold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(0,240,255,0.3)]"
             >
               <span className="material-symbols-outlined text-base">download</span>
               <span>Download A4</span>

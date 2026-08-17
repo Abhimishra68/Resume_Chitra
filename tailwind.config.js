@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        cyan: "#00F0FF",
         background: "#07122A",
         surface: "#07122A",
         "surface-container-low": "#101B33",
