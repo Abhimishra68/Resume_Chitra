@@ -19,6 +19,54 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
+        @keyframes neon-flicker-cyan {
+          0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+            text-shadow: 0 0 4px rgba(0, 240, 255, 0.25), 0 0 12px rgba(0, 240, 255, 0.5), 0 0 25px rgba(0, 240, 255, 0.7);
+            color: #00F0FF;
+            opacity: 1;
+          }
+          20%, 22%, 24%, 55% {
+            text-shadow: none;
+            color: rgba(0, 240, 255, 0.4);
+            opacity: 0.7;
+          }
+        }
+        @keyframes neon-flicker-yellow {
+          0%, 29%, 31%, 33%, 35%, 64%, 66%, 100% {
+            text-shadow: 0 0 4px rgba(255, 183, 0, 0.25), 0 0 12px rgba(255, 183, 0, 0.5), 0 0 25px rgba(255, 183, 0, 0.7);
+            color: #FFB700;
+            opacity: 1;
+          }
+          30%, 32%, 34%, 65% {
+            text-shadow: none;
+            color: rgba(255, 183, 0, 0.4);
+            opacity: 0.7;
+          }
+        }
+        @keyframes neon-flicker-orange {
+          0%, 39%, 41%, 43%, 45%, 74%, 76%, 100% {
+            text-shadow: 0 0 4px rgba(255, 127, 80, 0.25), 0 0 12px rgba(255, 127, 80, 0.5), 0 0 25px rgba(255, 127, 80, 0.7);
+            color: #FF7F50;
+            opacity: 1;
+          }
+          40%, 42%, 44%, 75% {
+            text-shadow: none;
+            color: rgba(255, 127, 80, 0.4);
+            opacity: 0.7;
+          }
+        }
+        @keyframes neon-flicker-blue {
+          0%, 49%, 51%, 53%, 55%, 84%, 86%, 100% {
+            text-shadow: 0 0 4px rgba(112, 165, 255, 0.25), 0 0 12px rgba(112, 165, 255, 0.5), 0 0 25px rgba(112, 165, 255, 0.7);
+            color: #70A5FF;
+            opacity: 1;
+          }
+          50%, 52%, 54%, 85% {
+            text-shadow: none;
+            color: rgba(112, 165, 255, 0.4);
+            opacity: 0.7;
+          }
+        }
         .animate-float-1 {
           animation: float-card-1 6s ease-in-out infinite;
         }
@@ -27,6 +75,18 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
         }
         .animate-sweep {
           animation: radar-sweep 8s linear infinite;
+        }
+        .flicker-cyan {
+          animation: neon-flicker-cyan 4.5s linear infinite;
+        }
+        .flicker-yellow {
+          animation: neon-flicker-yellow 5.5s linear infinite;
+        }
+        .flicker-orange {
+          animation: neon-flicker-orange 5s linear infinite;
+        }
+        .flicker-blue {
+          animation: neon-flicker-blue 5.2s linear infinite;
         }
       `}</style>
 
@@ -59,13 +119,19 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
             </h1>
 
             {/* Signature Monospace Discipline Label */}
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 pt-2">
-              <span className="font-mono text-xs sm:text-sm sm:text-base md:text-lg text-[#00F0FF] font-medium tracking-wide">
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 pt-2 select-none">
+              <span className="font-mono text-xs sm:text-sm sm:text-base md:text-lg text-[#00F0FF] font-medium tracking-wide flicker-cyan">
                 Data Analyst
               </span>
-              <span className="text-[#8892B0] font-mono hidden xs:inline">—</span>
-              <span className="font-mono text-[10px] sm:text-xs sm:text-sm md:text-base text-[#8892B0] tracking-wide">
-                Python · SQL · Power BI · PostgreSQL
+              <span className="text-[#8892B0] font-mono hidden xs:inline opacity-50">—</span>
+              <span className="font-mono text-[10px] sm:text-xs sm:text-sm md:text-base text-[#8892B0] tracking-wide flex items-center gap-2">
+                <span className="flicker-yellow">Python</span>
+                <span className="text-[#8892B0]/40">•</span>
+                <span className="flicker-orange">SQL</span>
+                <span className="text-[#8892B0]/40">•</span>
+                <span className="flicker-yellow">Power BI</span>
+                <span className="text-[#8892B0]/40">•</span>
+                <span className="flicker-blue">PostgreSQL</span>
               </span>
             </div>
           </div>
