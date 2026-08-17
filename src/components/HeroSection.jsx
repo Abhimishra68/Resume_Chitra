@@ -19,52 +19,55 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
-        @keyframes neon-flicker-cyan {
-          0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-            text-shadow: 0 0 4px rgba(0, 240, 255, 0.25), 0 0 12px rgba(0, 240, 255, 0.5), 0 0 25px rgba(0, 240, 255, 0.7);
+        @keyframes visual-beep {
+          0%, 100% {
+            text-shadow: none;
+            color: #8892B0;
+            opacity: 0.6;
+          }
+          /* Beep 1: Cyan */
+          2%, 6% {
+            text-shadow: 0 0 4px rgba(0, 240, 255, 0.4), 0 0 12px rgba(0, 240, 255, 0.6), 0 0 25px rgba(0, 240, 255, 0.8);
             color: #00F0FF;
             opacity: 1;
           }
-          20%, 22%, 24%, 55% {
+          10% {
             text-shadow: none;
-            color: rgba(0, 240, 255, 0.4);
-            opacity: 0.7;
+            color: #8892B0;
+            opacity: 0.6;
           }
-        }
-        @keyframes neon-flicker-yellow {
-          0%, 29%, 31%, 33%, 35%, 64%, 66%, 100% {
-            text-shadow: 0 0 4px rgba(255, 183, 0, 0.25), 0 0 12px rgba(255, 183, 0, 0.5), 0 0 25px rgba(255, 183, 0, 0.7);
+          /* Beep 2: Yellow */
+          27%, 31% {
+            text-shadow: 0 0 4px rgba(255, 183, 0, 0.4), 0 0 12px rgba(255, 183, 0, 0.6), 0 0 25px rgba(255, 183, 0, 0.8);
             color: #FFB700;
             opacity: 1;
           }
-          30%, 32%, 34%, 65% {
+          35% {
             text-shadow: none;
-            color: rgba(255, 183, 0, 0.4);
-            opacity: 0.7;
+            color: #8892B0;
+            opacity: 0.6;
           }
-        }
-        @keyframes neon-flicker-orange {
-          0%, 39%, 41%, 43%, 45%, 74%, 76%, 100% {
-            text-shadow: 0 0 4px rgba(255, 127, 80, 0.25), 0 0 12px rgba(255, 127, 80, 0.5), 0 0 25px rgba(255, 127, 80, 0.7);
+          /* Beep 3: Orange */
+          52%, 56% {
+            text-shadow: 0 0 4px rgba(255, 127, 80, 0.4), 0 0 12px rgba(255, 127, 80, 0.6), 0 0 25px rgba(255, 127, 80, 0.8);
             color: #FF7F50;
             opacity: 1;
           }
-          40%, 42%, 44%, 75% {
+          60% {
             text-shadow: none;
-            color: rgba(255, 127, 80, 0.4);
-            opacity: 0.7;
+            color: #8892B0;
+            opacity: 0.6;
           }
-        }
-        @keyframes neon-flicker-blue {
-          0%, 49%, 51%, 53%, 55%, 84%, 86%, 100% {
-            text-shadow: 0 0 4px rgba(112, 165, 255, 0.25), 0 0 12px rgba(112, 165, 255, 0.5), 0 0 25px rgba(112, 165, 255, 0.7);
+          /* Beep 4: Blue */
+          77%, 81% {
+            text-shadow: 0 0 4px rgba(112, 165, 255, 0.4), 0 0 12px rgba(112, 165, 255, 0.6), 0 0 25px rgba(112, 165, 255, 0.8);
             color: #70A5FF;
             opacity: 1;
           }
-          50%, 52%, 54%, 85% {
+          85% {
             text-shadow: none;
-            color: rgba(112, 165, 255, 0.4);
-            opacity: 0.7;
+            color: #8892B0;
+            opacity: 0.6;
           }
         }
         .animate-float-1 {
@@ -76,17 +79,20 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
         .animate-sweep {
           animation: radar-sweep 8s linear infinite;
         }
-        .flicker-cyan {
-          animation: neon-flicker-cyan 4.5s linear infinite;
+        .beep-text {
+          animation: visual-beep 8s linear infinite;
         }
-        .flicker-yellow {
-          animation: neon-flicker-yellow 5.5s linear infinite;
+        .delay-1 {
+          animation-delay: 0.18s;
         }
-        .flicker-orange {
-          animation: neon-flicker-orange 5s linear infinite;
+        .delay-2 {
+          animation-delay: 0.36s;
         }
-        .flicker-blue {
-          animation: neon-flicker-blue 5.2s linear infinite;
+        .delay-3 {
+          animation-delay: 0.54s;
+        }
+        .delay-4 {
+          animation-delay: 0.72s;
         }
       `}</style>
 
@@ -120,18 +126,18 @@ export default function HeroSection({ onResumeClick, onContactClick }) {
 
             {/* Signature Monospace Discipline Label */}
             <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 pt-2 select-none">
-              <span className="font-mono text-xs sm:text-sm sm:text-base md:text-lg text-[#00F0FF] font-medium tracking-wide flicker-cyan">
+              <span className="font-mono text-xs sm:text-sm sm:text-base md:text-lg font-medium tracking-wide beep-text">
                 Data Analyst
               </span>
               <span className="text-[#8892B0] font-mono hidden xs:inline opacity-50">—</span>
-              <span className="font-mono text-[10px] sm:text-xs sm:text-sm md:text-base text-[#8892B0] tracking-wide flex items-center gap-2">
-                <span className="flicker-yellow">Python</span>
+              <span className="font-mono text-[10px] sm:text-xs sm:text-sm md:text-base tracking-wide flex items-center gap-2">
+                <span className="beep-text delay-1">Python</span>
                 <span className="text-[#8892B0]/40">•</span>
-                <span className="flicker-orange">SQL</span>
+                <span className="beep-text delay-2">SQL</span>
                 <span className="text-[#8892B0]/40">•</span>
-                <span className="flicker-yellow">Power BI</span>
+                <span className="beep-text delay-3">Power BI</span>
                 <span className="text-[#8892B0]/40">•</span>
-                <span className="flicker-blue">PostgreSQL</span>
+                <span className="beep-text delay-4">PostgreSQL</span>
               </span>
             </div>
           </div>
