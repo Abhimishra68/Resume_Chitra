@@ -7,7 +7,10 @@ export default function ResumeModal({ isOpen, onClose }) {
   const resumeUrl = getAssetUrl('screenshots/resume_a4.jpg');
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-void/90 backdrop-blur-2xl animate-in fade-in duration-200">
+    <div 
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-[#07122A]/90 backdrop-blur-2xl animate-in fade-in duration-200"
+      onClick={onClose}
+    >
       <div 
         className="relative w-full max-w-4xl glass-panel rounded-2xl p-4 sm:p-6 md:p-8 max-h-[92vh] flex flex-col border border-cyan/30 shadow-[0_0_60px_rgba(0,240,255,0.15)]"
         onClick={(e) => e.stopPropagation()}

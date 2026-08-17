@@ -24,7 +24,10 @@ export default function ConnectModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-void/90 backdrop-blur-2xl animate-in fade-in duration-200">
+    <div 
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#07122A]/90 backdrop-blur-2xl animate-in fade-in duration-200"
+      onClick={onClose}
+    >
       <div 
         className="relative w-full max-w-lg glass-panel rounded-2xl p-5 sm:p-8 border border-cyan/30 shadow-[0_0_60px_rgba(0,240,255,0.15)]"
         onClick={(e) => e.stopPropagation()}
