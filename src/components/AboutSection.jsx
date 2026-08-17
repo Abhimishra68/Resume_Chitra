@@ -124,7 +124,7 @@ export default function AboutSection() {
 
           <div className="grid grid-cols-2 gap-3 sm:gap-3.5 relative z-10">
             <StatCounter 
-              target={3} 
+              target={6} 
               suffix="" 
               label="End-to-End Projects" 
             />
